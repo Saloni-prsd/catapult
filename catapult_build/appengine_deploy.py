@@ -62,3 +62,9 @@ def _VersionName():
   commit_hash = _Run(['git', 'rev-parse', '--short=8', 'HEAD']).strip()
   return '%s-%s-%s' % (deployment_type, username, commit_hash)
 
+# added Default Run method
+def _Run(command):
+  proc = subprocess.Popen(command, stdout=subprocess.PIPE)
+  output, _ = proc.communicate()
+  return output
+
