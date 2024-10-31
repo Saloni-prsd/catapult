@@ -4,6 +4,10 @@
 # found in the LICENSE file.
 
 
+# added simple missing imports
+import os
+import subprocess
+import sys
 from catapult_build import temp_deployment_dir
 
 
