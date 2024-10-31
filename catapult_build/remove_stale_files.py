@@ -35,13 +35,6 @@ def RemoveAllStaleFiles(base_dir, types_to_purge):
         pass
 
 
-def Main():
-  parser = argparse.ArgumentParser()
-  parser.add_argument('path', help='Path to clear stale files from.')
-  parser.add_argument('types', help='Comma separated list of types to purge.')
-  args = parser.parse_args(sys.argv[1:])
-
-  RemoveAllStaleFiles(args.path, args.types.split(','))
 
 
 if __name__ == '__main__':
