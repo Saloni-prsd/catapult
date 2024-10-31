@@ -6,9 +6,6 @@ import os
 import re
 
 
-def RunChecks(input_api, output_api, excluded_paths=()):
-  excluded_paths = list(excluded_paths) + [r'.*PRESUBMIT\.py']
-  root = input_api.change.RepositoryRoot()
 
   def ShouldCheck(filepath):
     if os.path.split(os.path.dirname(filepath))[1] != 'bin':
